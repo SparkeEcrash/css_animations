@@ -1,0 +1,68 @@
+/* SET SPECIFIC TARGETS FOR TRANSITON
+transition: 
+background-color 3s ease-in-out 1s,
+color 3s ease-in-out 1s,
+width 3s ease-in-out 1s,
+border-radius 1s ease-in-out 4s,
+transform 3s ease-in-out 4s; 
+*/
+
+/*
+Animation duration: 3s
+Animation delay: 4s
+*/
+
+body {
+	margin: 0;
+}
+
+div {
+	width: 150px;
+	height: 150px;
+	background-color: red;
+	animation-name: moving;
+	animation-duration: 5s;
+	animation-fill-mode: backwards; 
+	/*
+	none: goes back to way it was
+	forwards: take last stage and make it stay there after animation ends
+	backwards: takes first stage of animation and applies it BEFORE animation-delay is applied 
+	(when animation is waiting 3s to start... the starting position is at the first stage of the animation)
+	both: apply both forwards and backwards property
+	*/
+	animation-delay: 3s; 
+	/* animation waits three seconds before it starts */
+
+	animation-iteration-count: 3;
+	/*animation-iteration-count: infinite */
+	/* animation repeats 3 times */
+
+	animation-timing-function: ease;
+	/*ease ease-out ease-in ease-in-out linear*/
+
+	animation-direction: reverse; /*start animation from 0% to 100%*/
+	/*reverse: 100% to 0%*/
+	/*alternate: 0 to 100% and then back to 0%*/
+	/*alternate-reverse: 100% to 0% and then back to 100%*/
+
+	/*SHORTHAND*/
+	/*first parameter: animation name
+		second parameter: animation-duration
+		third parameter:  animation-fill-mode
+		fourth parameter: animation-delay (has to be after animation-duration)
+	*/
+	animation: moving 3s both 3 ease-in alternate 1s;
+}
+
+/*
+@keyframes moving {
+	from {transform: translateX(0);}
+	to {transform: translateX(1000px);}
+}
+*/
+
+@keyframes moving {
+	0% {transform: translateX(500px);}
+	50% {transform: translateX(1000px);} /*.3s*/
+	100% {transform: translate(1000px, 500px);} /*2.7s*/
+}

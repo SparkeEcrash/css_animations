@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>translate in 3D</title>
+<style type="text/css">
+
+body {
+	perspective: 500px;
+	/*sets the distance between the screen and the viewer which is the z-axis*/
+	/*a line that passes from the screen to our eyes*/
+}
+
+img {
+	width: 300px;
+	display: block;
+	margin: auto;
+	margin-top: 200px;
+	transition: transform 1s;
+}
+
+img:hover {
+	/*
+	transform: translateZ(-300px);
+	image is actually moving farther away from the viewer which is causing it to become smaller */
+	transform: translateZ(300px); /*cannot be greater than the 'perspective' value in body element*/
+	/*image is actually moving closer to the viewer which is causing it to become bigger*/
+}
+
+</style>
+</head>
+
+<body>
+
+	<img src="cat.jpg" alt="">
+
+</body>
+</html>

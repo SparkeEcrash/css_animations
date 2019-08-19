@@ -1,0 +1,272 @@
+body {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-family: sans-serif;
+	flex-direction: column;
+}
+
+.container {
+	width: 250px;
+	height: 250px;
+	position: relative;
+	margin: 20px 0;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+/***ONE**/
+.container.one {
+	overflow: hidden;
+}
+
+.container.one .caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	opacity: 0;
+	transition: all 0.5s;
+	background: rgba(0,0,0,0);
+}
+
+.container.one .caption h1 {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.container.one .caption p {
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+.container.one:hover .caption {
+	opacity: 1;
+	background: rgba(0,0,0,0.5);
+}
+
+.container.one img {
+	transition: transform 0.5s;
+}
+
+.container.one:hover img {
+	transform: scale(1.3) rotate(15deg);
+}
+
+/**TWO**/
+.container.two {
+	overflow: hidden;
+}
+
+.container.two .caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	opacity: 1;
+	transition: all 0.5s;
+	background: rgba(0,0,0,0.5);
+	transform: translateX(-100%);
+	/*transform: translateY(-100%);*/
+}
+
+.container.two .caption h1 {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.container.two .caption p {
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+.container.two:hover .caption {
+	transform: translateX(0);
+	/*transform: translateY(0);*/
+}
+
+.container.two img {
+	transition: transform 0.5s;
+}
+
+.container.two:hover img {
+	transform: scale(1.3) rotate(-15deg);
+}
+
+/**THREE**/
+.container.three {
+	overflow: hidden;
+}
+
+.container.three .caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	opacity: 1;
+	transition: all 0.5s;
+	background: rgba(0,0,0,1);
+	transform: translateX(-100%);
+	/*transform: translateY(-100%);*/
+}
+
+.container.three .caption h1 {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.container.three .caption p {
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+.container.three:hover .caption {
+	transform: translateX(0);
+}
+
+.container.three img {
+	transition: transform 0.5s;
+}
+
+.container.three:hover img {
+	transform: translateX(100%);
+}
+
+/**FOUR**/
+.container.four {
+	overflow: hidden;
+}
+
+.container.four .caption {
+	position: absolute;
+	bottom: -30%;
+	left: 0;
+	height: 30%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	opacity: 1;
+	transition: bottom 0.5s;
+	background: rgba(0,0,0,1);
+}
+
+.container.four .caption h1 {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin: 0;
+}
+
+.container.four .caption p {
+	font-size: 8px;
+	text-transform: capitalize;
+}
+
+.container.four:hover .caption {
+	bottom: 0;
+}
+
+.container.four img {
+	transition: transform 0.5s;
+}
+
+.container.four:hover img {
+	transform: translateY(-30%);
+}
+
+/**FIVE**/
+.fig {
+	width: 250px;
+	color: white;
+	font-family: sans-serif;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.fig img {
+	width: 100%;
+}
+
+.fig:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #006266;
+	opacity: 0.5;
+	transform: translateY(100%);
+	transition: transform 0.5s;
+	transition-delay: 0.25s;
+}
+
+.fig:hover:before {
+	transform: translateY(0);
+	transition-delay: 0s;
+}
+
+.fig .caption {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transform: translateY(-20px);
+	opacity: 0;
+	transition: all 0.25s;
+}
+
+.fig:hover .caption {
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.3s;
+}
+
+.fig h3, .fig h5 {
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.fig h3 {
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.fig h5 {
+	background-color: #ae895d;
+	padding: 3px 5px;
+}

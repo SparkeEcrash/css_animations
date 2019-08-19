@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transition</title>
+<style type="text/css">
+
+img {
+	width: 300px;
+	display: block;
+	margin: auto;
+	margin-top: 200px;
+	/*transform: scaleX(-1);*/
+	transition: transform 2s;
+
+}
+
+img:hover {
+	transform: scaleX(2); /*change width of image*/
+	transform: scaleY(2); /*change height of image*/
+	transform: scaleX(-1); /*invert the image vertically*/
+	transform: scaleY(-1); /*invert the image horizontally*/
+	transform: scale(2, 2); /*double the size in image within proportion*/
+	transform: scale(2); /*same thing*/
+
+}
+
+</style>
+</head>
+
+<body>
+
+	<img src="cat.jpg" alt="">
+
+</body>
+</html>

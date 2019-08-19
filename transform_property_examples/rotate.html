@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transition</title>
+<style type="text/css">
+
+img {
+	width: 300px;
+	display: block;
+	margin: auto;
+	margin-top: 200px;
+	transition: transform 2s;
+}
+
+img:hover {
+	transform: rotate(20deg); /*rotates 20 deg clockwise */
+	transform: rotate(-20deg); /*rotates 20 deg counter clockwise */
+	transform: rotate(1turn); /*turn image clockwise one full spin */
+	transform: rotate(-1turn); /*turn image counterclockwise one full spin */
+	transform: rotate(200grad); /*half turn clockwise*/
+
+}
+
+</style>
+</head>
+
+<body>
+
+	<img src="cat.jpg" alt="">
+
+</body>
+</html>

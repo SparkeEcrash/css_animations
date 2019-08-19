@@ -1,0 +1,23 @@
+/*https://stackoverflow.com/questions/22744438/remove-body-class-after-window-load-with-javascript/22744494#22744494
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+$("window").load(function() {
+  $("body").removeClass("preload");
+});
+
+window.addEventListener(
+    'load',
+    function load()
+    {
+        window.removeEventListener('load', load, false);
+        document.body.classList.remove('preload');
+    },
+		false);
+		
+*/

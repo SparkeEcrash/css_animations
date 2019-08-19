@@ -1,0 +1,431 @@
+/* SET SPECIFIC TARGETS FOR TRANSITON
+transition: 
+background-color 3s ease-in-out 1s,
+color 3s ease-in-out 1s,
+width 3s ease-in-out 1s,
+border-radius 1s ease-in-out 4s,
+transform 3s ease-in-out 4s; 
+*/
+
+/*
+Animation duration: 3s
+Animation delay: 4s
+*/
+
+/*https://stackoverflow.com/questions/22744438/remove-body-class-after-window-load-with-javascript/22744494#22744494
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+$("window").load(function() {
+  $("body").removeClass("preload");
+});
+
+window.addEventListener(
+    'load',
+    function load()
+    {
+        window.removeEventListener('load', load, false);
+        document.body.classList.remove('preload');
+    },
+		false);
+		
+*/
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font-family: sans-serif;
+	font-size: 16px;
+	border: 2px solid #272727;
+	padding: 10px 20px;
+	position: relative;
+	margin: 10px 0;
+}
+
+a:before {
+	content: '';
+	position: absolute;
+}
+
+/***ONE***/
+a.one {
+	overflow: hidden;
+}
+
+a.one:before {
+	left: 0;
+	top: 0;
+	background-color: #ff8800;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	transform-origin: bottom left;
+	transform: rotate(-90deg);
+	transition: transform 1s;
+}
+
+a.one:hover:before {
+	transform: rotate(0deg);
+}
+
+/***TWO***/
+a.two {
+	overflow: hidden;
+	transition: color 1s;
+}
+
+a.two:hover {
+	color: white;
+}
+
+a.two:before {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #ff8800;
+	z-index: -1;
+	transform: translateX(-100%);
+	transition: transform 1s;
+}
+
+a.two:hover:before {
+	transform: translateX(0);
+}
+
+/***THREE***/
+a.three {
+	transition: color 1s;
+}
+
+a.three:hover {
+	color: white;
+}
+
+a.three:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ff8800;
+	z-index: -1;
+	transition: 1s;
+	transform: rotateX(90deg);
+}
+
+a.three:hover:before {
+	transform: rotateX(0);
+}
+
+a.three:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ff8800;
+	z-index: -1;
+	transition: 1s;
+	transform: rotateY(90deg);
+}
+
+a.three:hover:after {
+	transform: rotateY(0);
+}
+
+/***FOUR***/
+a.four {
+	color: black;
+	border: 2px solid black;
+	font-weight: 300;
+
+	transition: 
+	font-weight .5s,
+	letter-spacing .5s,
+	border .5s,
+	color .5s;
+}
+
+a.four:hover {
+	font-weight: 900;
+	letter-spacing: 4px;
+	border: 5px solid #ff8800;
+	color: #ff8800;
+}
+
+/***FIVE***/
+a.five {
+	color: black;
+	border: 2px solid black;
+	overflow: hidden;
+}
+
+a.five:before {
+	content: 'YEAH!';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #ff8800;
+	transform: translateY(-100%);
+	transition: all 1s;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a.five:hover:before {
+	transform: translateY(0);
+}
+
+/***SIX***/
+a.six {
+	color: black;
+	border: 2px solid black;
+	transition: background-color .3s;
+	overflow: hidden;
+}
+
+a.six:hover {
+	background-color: #ff8800;
+}
+
+a.six:before {
+	content: '';
+	background-color: white;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	transform: translateX(-100%) rotate(45deg);
+	transition: all 0.3s;
+}
+
+a.six:hover:before {
+	transform: translateX(100%) rotate(45deg);
+}
+
+/***SEVEN***/
+a.seven {
+	overflow:hidden;
+	color: transparent;
+	background-color: #ff8800;
+}
+
+a.seven:before {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	color: black;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+}
+
+a.seven:after {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #ff8800;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+	transform: translate(-100%, 100%);
+}
+
+a.seven:hover:before {
+	transform: translate(100%, -100%);
+}
+
+a.seven:hover:after {
+	transform: translate(0,0);
+}
+
+/***EIGHT***/
+a.eight {
+	transition: all 0.5s;
+	overflow:hidden;
+}
+
+a.eight:before {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #ff8800;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(5);
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+a.eight:hover:before {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/***TEN***/
+button.ten {
+	border: 2px solid #272727;
+	margin: 10px 0;
+	padding: 10px 20px;
+	background: none;
+	color: black;
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: color 0.5s;
+	position: relative;
+	font-family: sans-serif;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+button.ten:hover {
+	color: white;
+}
+
+button.ten:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #ff8800;
+	border-radius: 0 0 50% 50%;
+	height: 0;
+	transition: height .5s;
+}
+
+button.ten:hover:before {
+	height: 200%;
+}
+
+/***ELEVEN***/
+a.eleven {
+	
+}
+
+a.eleven:before {
+	content: "Hover Me";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ff8800;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotateX(270deg);
+	transform-origin: top;
+	transition: all 0.5s;
+}
+
+a.eleven:hover:before {
+	transform: rotateX(0deg);
+}
+
+a.eleven:after {
+	content: "Hover Me";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	color: #ff8800;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotateX(270deg);
+	transform-origin: bottom;
+	transition: all 0.5s;
+	transition-delay: 0.25s;
+}
+
+a.eleven:hover:after {
+	transform: rotateX(0deg);
+}
+
+/***TWELVE***/
+a.twelve {
+	color:transparent;
+}
+
+a.twelve:before {
+	content: "Hover Me";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ff8800;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+}
+
+a.twelve:hover:before {
+	left: 100%;
+	transform: scale(0) rotateY(360deg);
+	opacity: 0;
+}
+
+a.twelve:after {
+	content: "Hover Me";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: #ff8800;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+	transform: scale(0) rotateY(0deg);
+	opacity: 0;
+}
+
+a:hover:after {
+	left: 0;
+	transform: scale(1) rotateY(360deg);
+	opacity: 1;
+}

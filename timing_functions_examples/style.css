@@ -1,0 +1,103 @@
+/*
+
+/*PROPERTIES THAT CANNOT HAVE TRANSITION PROPERTIES
+background-image
+display
+border-style
+position
+float 
+font-family
+
+/*PROPERTIES THAT CAN HAVE TRANSITION PROPERTIES
+width
+height
+border-width
+padding
+margin
+line-height
+opacity
+color 
+background-color 
+
+*/
+
+.container-one {
+	font-size: 28px;
+}
+
+.container-one button {
+	height: 90px;
+	width: 290px;
+	font-size: 28px;
+	color: white;
+	border: none;
+	background-color: blue;
+	border-radius: 50%;
+	
+
+	/* transition-property: all; */
+	/*
+	transition-property: background-color, color, width;
+	transition-duration: 1s; 
+	transition-delay: 500ms; 
+	*/
+
+	/*short hand for all transition-**** properties */
+	transition: 
+	background-color 3s ease-in-out 1s, /* 3s duration animation after 1s delay */
+	color 3s ease-in-out 1s,
+	width 3s ease-in-out 1s,
+	border-radius 1s ease-in-out 4s; 
+}
+
+.container-one button:hover {
+	background-color: green;
+	color: black;
+	width: 600px;
+	border-radius: 200px;
+}
+
+/* */
+
+.container-two {
+	width: 960px;
+}
+
+.move {
+	margin: 2em;
+	width: 150px;
+	height: 50px;
+	padding: 10px 15px;
+	background-color: red;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	border-radius: .5em;
+	font-size: 20px;
+	transition-property: translate();
+	transition-duration: 3s;
+}
+
+#ease {
+	transition-timing-function: ease;
+}
+
+#linear {
+	transition-timing-function: linear;
+}
+
+#ease-in {
+	transition-timing-function: ease-in;
+}
+
+#ease-out {
+	transition-timing-function: ease-out;
+}
+
+#ease-in-out {
+	transition-timing-function: ease-in-out;
+}
+
+.move:hover {
+	transform: translate(900px, 0);
+}

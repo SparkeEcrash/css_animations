@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transition</title>
+<style type="text/css">
+
+img {
+	width: 300px;
+	display: block;
+	margin: auto;
+	margin-top: 200px;
+	transition: transform 2s;
+}
+
+img:hover {
+	transform: skewX(30deg); /*moves top corners left and bottom corners right*/
+	transform: skewX(-30deg); /*moves top corners right and bottom corners left*/
+	transform: skewY(30deg); /*moves left corners up and right corners bottom */
+	transform: skewY(-30deg); /*moves left corners bottom and right corners top */
+	transform: skew(20deg, 40deg); /*skew(skewX deg value, skewY deg value)*/
+}
+
+</style>
+</head>
+
+<body>
+
+	<img src="cat.jpg" alt="">
+
+</body>
+</html>
