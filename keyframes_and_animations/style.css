@@ -12,6 +12,10 @@ Animation duration: 3s
 Animation delay: 4s
 */
 
+/* WEBSITE RESOURCE
+https://cubic-bezier.com/#.17,.67,.83,.67
+*/
+
 body {
 	margin: 0;
 }
